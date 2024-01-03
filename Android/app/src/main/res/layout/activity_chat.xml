@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/myRelativeLayout"
+    android:background="@color/white"
+    tools:context=".ChatActivity">
+
+
+    <!-- RecyclerView for messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messagesView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout"/>
+
+    <!-- Linear Layout for chat box, send, and record buttons -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/chatBox"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:background="@drawable/message_background"
+            android:hint="@string/chatBoxHint" />
+
+        <ImageButton
+            android:id="@+id/sendMessageBtn"
+            android:layout_width="60dp"
+            android:layout_height="56dp"
+            android:background="@drawable/send_btn"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/sendVoices"
+            android:layout_width="60dp"
+            android:layout_height="54dp"
+            android:src="@drawable/micro"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/stopRecord"
+            android:layout_width="60dp"
+            android:layout_height="54dp"
+            android:src="@drawable/ic_stop_circle"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <!-- Go Back Home Button -->
+<!--    <Button-->
+<!--        android:id="@+id/goBackHome"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:background="@color/blue"-->
+<!--    android:text="@string/retour"-->
+<!--    android:textColor="#FFFFFF"-->
+<!--    android:contentDescription="@string/retour"/>-->
+
+    <!-- Other buttons -->
+
+    <android.widget.Button
+        android:id="@+id/backToMain1"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="1100dp"
+        android:layout_marginBottom="450dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#f00020"
+        android:text="Retour"
+        android:textColor="@color/white" />
+
+    <ImageButton
+        android:id="@+id/listPlayersButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="900dp"
+        android:visibility="invisible"
+        app:srcCompat="@android:drawable/ic_menu_myplaces" />
+
+
+        <Button
+            android:id="@+id/pickColorButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="1000dp"
+            android:background="@drawable/baseline_color_lens_24" />
+    <!-- Color Picker View (initially invisible) -->
+    <com.skydoves.colorpickerview.ColorPickerView
+        android:id="@+id/colorPickerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+
+    </com.skydoves.colorpickerview.ColorPickerView>
+
+    <!-- Button to activate the Color Picker -->
+
+    </RelativeLayout>

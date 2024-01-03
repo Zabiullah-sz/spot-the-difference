@@ -1,0 +1,72 @@
+<button routerLink="/home" class="button-back">Retour</button>
+<div class="config-container">
+    <!-- User Settings -->
+    <section class="user-settings">
+        <h2>Paramètres utilisateur</h2>
+
+        <!-- Username -->
+        <div class="settings-group">
+            <label>Nom d'utilisateur :</label>
+            <input type="text" [(ngModel)]="username" />
+            <button *ngIf="usernameChanged" (click)="updateUsername()">Save</button>
+        </div>
+
+        <!-- Password -->
+        <div class="settings-group">
+            <label>Mot de passe :</label>
+            <input type="password" [(ngModel)]="password" />
+            <button *ngIf="passwordChanged" (click)="updatePassword()">Save</button>
+        </div>
+
+        <!-- Profile Picture -->
+        <div class="settings-group">
+            <label>Photo de profil :</label>
+            <input type="file" (change)="profilePictureChanged($event)" />
+            <button *ngIf="imageChanged" (click)="updateProfilePicture()">Save</button>
+        </div>
+
+    </section>
+
+    <!-- Friend Request Box -->
+    <div class="friend-request-box">
+        <section class="send-request">
+            <h2>Envoie une demande d'ami :</h2>
+
+            <!-- By Username -->
+            <div class="by-username">
+                <input type="text" placeholder="Enter username" [(ngModel)]="friendUsername" />
+                <button (click)="sendRequest()">Envoyer la demande</button>
+            </div>
+
+            <!-- By User Selection -->
+            <h3>Joueurs actuellement actifs :</h3>
+            <div class="user-list">
+                <div class="user-box" *ngFor="let user of activeUsers">
+                    <img
+                        [src]="imageBaseUrl+ user.userId"
+                        alt="{{ user.username }}'s profile picture"
+                    />
+                    <p>{{ user.username }}</p>
+                    <button (click)="sendRequestToUser(user.username)">Send Request</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- New section for pending request-->
+    <div class="pending-request-box">
+        <section class="pending-request">
+            <h2>Demandes d'amis en attente</h2>
+            <div class="pending-request-list">
+                <div class="pending-request-box" *ngFor="let request of pendingRequests">
+                    <img
+                        [src]="imageBaseUrl+ request.from.userId"
+                        alt="{{ request.from.username }}'s profile picture"
+                    />
+                    <p>{{ request.from.username }}</p>
+                    <button (click)="completeFriendRequest(request, 'accepted')">Accept</button>
+                    <button (click)="completeFriendRequest(request, 'denied')">Reject</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

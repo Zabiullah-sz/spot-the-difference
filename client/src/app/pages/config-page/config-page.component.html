@@ -1,0 +1,50 @@
+<app-top-bar [pageTitle]="'Configuration'" style="width: 100%"></app-top-bar>
+<div id="page-core" class="row">
+    <app-carousel-view [buttonNames]="buttonNames"></app-carousel-view>
+    <div class="sidebar">
+        <div class="sidebar-top">
+            <a class="button" routerLink="/creation" draggable="false">
+                <img id="create-game" src="./assets/create-game.png" />
+            </a>
+            <a class="button" (click)="deleteAllGames()" draggable="false">
+                <img id="delete-games" src="./assets/delete-games.png" />
+            </a>
+        </div>
+        <a class="button" (click)="resetAllBestTimes()" draggable="false">
+            <img id="reset-best-times" src="./assets/reset-best-times.png" />
+        </a>
+        <a class="button" (click)="requestHistory()" draggable="false">
+            <img id="game-history" src="./assets/game-history.png" />
+        </a>
+        <a class="button" (click)="requestGameConstants()" draggable="false">
+            <img id="game-settings" src="./assets/game-settings.png" />
+        </a>
+
+        <!-- Titre de la sélection des sons -->
+        <div class="sound-selection">
+            <h3>Sélection des Sons</h3>
+
+            <!-- Sélection du son pour le succès -->
+            <div class="sound-selection">
+                <label for="successSoundSelect">Sélectionner le son pour le succès :</label>
+                <select id="successSoundSelect" [(ngModel)]="selectedSuccessSoundIndex">
+                    <option value="1">Succès 1</option>
+                    <option value="0">Succès 2</option>
+                </select>
+                <button class="listen-button" (click)="playSuccessSound()">Écouter</button
+                ><button class="confirm-button" (click)="confirmSuccessSound()">Confirmer</button>
+            </div>
+
+            <!-- Sélection du son pour les erreurs -->
+            <div class="sound-selection">
+                <label for="errorSoundSelect">Sélectionner le son pour les erreurs :</label>
+                <select id="errorSoundSelect" [(ngModel)]="selectedErrorSoundIndex">
+                    <option value="1">Erreur 1</option>
+                    <option value="0">Erreur 2</option>
+                </select>
+                <button class="listen-button" (click)="playErrorSound()">Écouter</button
+                ><button class="confirm-button" (click)="confirmErrorSound()">Confirmer</button>
+            </div>
+        </div>
+    </div>
+</div>

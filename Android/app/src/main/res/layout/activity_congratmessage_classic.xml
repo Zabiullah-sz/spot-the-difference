@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="950dp"
+    android:layout_height="600dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bleu"
+    tools:context=".CongratMessageClassic">
+
+    <ImageView
+        android:id="@+id/congratsImage"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="272dp"
+        android:layout_marginBottom="204dp"
+        android:src="@drawable/congrats_coop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/closeButton"
+        android:layout_width="200dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="620dp"
+        android:layout_marginBottom="92dp"
+        android:background="@drawable/close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/replay"
+        android:layout_width="200dp"
+        android:layout_height="86dp"
+        android:layout_below="@id/congratsImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginBottom="92dp"
+        android:background="@drawable/replay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/winnerName"
+        android:layout_width="226dp"
+        android:layout_height="119dp"
+        android:textColor="@color/bleu"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginBottom="450dp"
+        android:layout_marginStart="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

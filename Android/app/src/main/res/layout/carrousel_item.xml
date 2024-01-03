@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/backgroundCardColor"
+        android:layout_width="540dp"
+        android:layout_height="360dp"
+        android:background="#67eae5"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Titre"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Difficulté"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundCardColor"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jackandphantom.carouselrecyclerview.view.ReflectionImageView
+        android:id="@+id/imageGame"
+        android:layout_width="240dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/paper"
+        android:gravity="center"
+        android:text="Jouer en solo"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/playButton2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_alignRight="@id/imageGame"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/paper"
+        android:gravity="center"
+        android:text="Jouer multijoueur"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundCardColor" />
+
+    <ImageView
+        android:id="@+id/bestTimesImage"
+        android:layout_width="350dp"
+        android:layout_height="190dp"
+        android:layout_marginStart="-240dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backgroundCardColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/button_background" />
+
+    <ImageView
+        android:id="@+id/imageTapeLeftTop"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="-14dp"
+        android:layout_marginEnd="-40dp"
+        android:rotation="-38"
+        app:layout_constraintEnd_toStartOf="@+id/bestTimesImage"
+        app:layout_constraintTop_toTopOf="@+id/bestTimesImage"
+        app:srcCompat="@drawable/adhesive_tape" />
+
+    <ImageView
+        android:id="@+id/imageTapeLeftBottom"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="-40dp"
+        android:layout_marginBottom="-12dp"
+        android:rotation="38"
+        app:layout_constraintBottom_toBottomOf="@+id/bestTimesImage"
+        app:layout_constraintEnd_toStartOf="@+id/bestTimesImage"
+        app:srcCompat="@drawable/adhesive_tape" />
+
+    <ImageView
+        android:id="@+id/imageTapeRightTop"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="-40dp"
+        android:layout_marginTop="-14dp"
+        android:rotation="38"
+        app:layout_constraintTop_toTopOf="@+id/bestTimesImage"
+        app:layout_constraintStart_toEndOf="@+id/bestTimesImage"
+        app:srcCompat="@drawable/adhesive_tape" />
+
+    <ImageView
+        android:id="@+id/imageTapeRightBottom"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="-40dp"
+        android:layout_marginBottom="-12dp"
+        android:rotation="-38"
+        app:layout_constraintBottom_toBottomOf="@+id/bestTimesImage"
+        app:layout_constraintStart_toEndOf="@+id/bestTimesImage"
+        app:srcCompat="@drawable/adhesive_tape" />
+
+    <TextView
+        android:id="@+id/textViewTitleTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="148dp"
+        android:text="TOP 3"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/bestTimesImage"
+        app:layout_constraintStart_toStartOf="@+id/bestTimesImage"
+        app:layout_constraintTop_toTopOf="@+id/bestTimesImage" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="145dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bestTimesImage"
+        app:layout_constraintEnd_toEndOf="@+id/bestTimesImage"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleTimes">
+
+        <TextView
+            android:id="@+id/titleMulti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="1 VS 1"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/markerM1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="1."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleMulti" />
+
+        <TextView
+            android:id="@+id/nameMulti1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Nom"
+            app:layout_constraintStart_toEndOf="@+id/markerM1"
+            app:layout_constraintTop_toBottomOf="@+id/titleMulti" />
+
+        <TextView
+            android:id="@+id/timeMulti1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleMulti" />
+
+        <TextView
+            android:id="@+id/markerM2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="2."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/markerM1" />
+
+        <TextView
+            android:id="@+id/nameMulti2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Nom"
+            app:layout_constraintStart_toEndOf="@+id/markerM2"
+            app:layout_constraintTop_toBottomOf="@+id/nameMulti1" />
+
+        <TextView
+            android:id="@+id/timeMulti2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeMulti1" />
+
+        <TextView
+            android:id="@+id/markerM3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="1."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/markerM2" />
+
+        <TextView
+            android:id="@+id/nameMulti3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Nom"
+            app:layout_constraintStart_toEndOf="@+id/markerM3"
+            app:layout_constraintTop_toBottomOf="@+id/nameMulti2" />
+
+        <TextView
+            android:id="@+id/timeMulti3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeMulti2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="145dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bestTimesImage"
+        app:layout_constraintStart_toStartOf="@+id/bestTimesImage"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleTimes">
+
+        <TextView
+            android:id="@+id/titleSolo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="SOLO"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/markerS1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="1."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleSolo" />
+
+        <TextView
+            android:id="@+id/nameSolo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Nom"
+            app:layout_constraintStart_toEndOf="@+id/markerS1"
+            app:layout_constraintTop_toBottomOf="@+id/titleSolo" />
+
+        <TextView
+            android:id="@+id/timeSolo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleSolo" />
+
+        <TextView
+            android:id="@+id/markerS2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="2."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/markerS1" />
+
+        <TextView
+            android:id="@+id/nameSolo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Nom"
+            app:layout_constraintStart_toEndOf="@+id/markerS2"
+            app:layout_constraintTop_toBottomOf="@+id/nameSolo1" />
+
+        <TextView
+            android:id="@+id/timeSolo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeSolo1" />
+
+        <TextView
+            android:id="@+id/markerS3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="1."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/markerS2" />
+
+        <TextView
+            android:id="@+id/nameSolo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Nom"
+            app:layout_constraintStart_toEndOf="@+id/markerS3"
+            app:layout_constraintTop_toBottomOf="@+id/nameSolo2" />
+
+        <TextView
+            android:id="@+id/timeSolo3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeSolo2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toEndOf="@+id/backgroundCardColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/push_pin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

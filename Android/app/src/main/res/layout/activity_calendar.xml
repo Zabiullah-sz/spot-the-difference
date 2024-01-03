@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalendarActivity" >
+
+    <android.widget.Button
+        android:id="@+id/backToMain"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginLeft="1130dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/output_24"
+        android:textColor="@color/white" />
+
+    <android.widget.Button
+        android:id="@+id/ChatButton1"
+        android:layout_width="150dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="580dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#fcdb00"
+        android:text="Chat"
+        android:textColor="@color/black" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="700dp"
+        android:layout_height="700dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25sp"
+        app:cardElevation="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/eventBox"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="200dp"
+            android:height="80dp"
+            android:hint="@string/rentrez_votre_v_nement"
+            />
+
+        <EditText
+            android:id="@+id/dateBox"
+            android:layout_width="500dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="350dp"
+            android:height="80dp"
+            android:hint="rentrez la date de début de l'événement (MM-dd-yyyy-hh:mm)"
+            />
+
+        <android.widget.Button
+            android:id="@+id/createEventButton"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="480dp"
+            android:layout_marginStart="270dp"
+            android:text="@string/cr_er"
+            android:textColor="@color/black"
+            android:backgroundTint="#007bff"
+            android:background="@drawable/button_background" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

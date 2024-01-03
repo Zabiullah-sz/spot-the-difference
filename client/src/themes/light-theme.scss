@@ -1,0 +1,22 @@
+/* light-theme.scss */
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+
+$theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($theme);
+
+// Appliquez l'arrière-plan uniquement lorsque le thème est "light"
+body[theme='light'] {
+    $background-image: url('../assets/Postboard_background.png');
+    background-image: $background-image;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh; /* Utilisation des unités de vue pour la taille de l'arrière-plan */
+    margin: 0; /* Supprimer les marges par défaut du corps */
+    height: 100%; /* Assurer que le corps remplit toute la hauteur de la fenêtre */
+}

@@ -1,0 +1,220 @@
+.button-back {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+.config-container {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: scroll;
+  overflow-y: auto;
+  height: 90vh;
+
+  h2, h3, h4 {
+    color: #333;
+  }
+
+  .settings-group, .pending-requests, .send-request {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input[type="text"], input[type="password"], select, input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; // leave space for the icon
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      padding: 5px 0;
+    }
+  }
+
+  button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  .save-settings-btn {
+    background-color: #28a745;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+  .friend-request-box, .pending-request-box {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .friend-request-box {
+    background-color: #5b5b5ba6;
+  }
+
+  .pending-request-box {
+    background-color: #f1f1f1;
+  }
+
+  .by-username, .pending-request-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    input {
+      flex: 1;
+      margin-right: 10px;
+    }
+  }
+
+  .user-list, .pending-request-list {
+    flex-wrap: wrap;
+
+    .user-box, .pending-request-box {
+      width: 150px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      img {
+        max-width: 20px;
+        max-height: 20px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+.stats-container {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  
+  canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+.average-stats {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+
+  p {
+      margin: 8px 0;
+      font-size: 14px;
+  }
+}
+.ranking-section {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.ranking-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ranking-list li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.ranking-list li:last-child {
+  border-bottom: none;
+}
+
+.rank {
+  width: 30px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.username {
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.points {
+  margin-right: 20px;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}

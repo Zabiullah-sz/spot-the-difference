@@ -1,0 +1,19 @@
+.theme-selector {
+    position: fixed;
+    bottom: 2%; /* Position par rapport à la hauteur de l'écran */
+    right: 2%; /* Position par rapport à la largeur de l'écran */
+    padding: 8px 15px; /* Ajustez ces valeurs pour réduire la hauteur du sélecteur */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px; /* Ajustez la taille de la police si nécessaire */
+    width: 15vw; /* Largeur en fonction de la largeur de l'écran */
+    min-width: 150px; /* Largeur minimale pour assurer la lisibilité */
+    max-width: 300px; /* Largeur maximale pour éviter le dépassement de l'écran */
+    z-index: 9999; /* Assurez-vous que le sélecteur a un z-index élevé */
+
+    transition: background-color 0.3s;
+}

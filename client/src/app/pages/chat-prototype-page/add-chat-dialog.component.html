@@ -1,0 +1,18 @@
+<div class="dialog-container">
+  <div class="input-with-tags">
+  <input [(ngModel)]="name" 
+  placeholder="Enter chat room name">
+</div>
+  <div class="input-with-tags">
+      <div class="tags">
+          <span class="tag" *ngFor="let user of users">{{ user }}</span>
+      </div>
+     
+      <input [(ngModel)]="username" 
+             (keyup.enter)="addTag()" 
+             (keydown)="handleKeydown($event)" 
+             placeholder="Enter username...">
+
+  </div>
+  <button class="dialog-button" (click)="createChat()" [disabled]="!name" >Create</button>
+</div>

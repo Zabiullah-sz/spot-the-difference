@@ -1,0 +1,16 @@
+<div id="tutorialPopup" class="popup">
+    <div class="tutorial">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item" [ngClass]="{ active: activeSlide === 1 }">
+                    <img [src]="images[activeSlide]" [alt]="'Image ' + (activeSlide + 1)" />
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="button" (click)="prevSlide()">Précédent</a>
+            <button class="button" (click)="returnToHomePage()">Retour à la page principale</button>
+            <a class="button" (click)="nextSlide()">Suivant</a>
+        </div>
+    </div>
+</div>

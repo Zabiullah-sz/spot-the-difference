@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <ImageView
+        android:id="@+id/imagePendingPlayer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/avatar"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/playerName6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text="Nom joueur"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+    <android.widget.Button
+        android:id="@+id/acceptRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text ="Accepter"
+        android:textColor="@color/black"
+        android:backgroundTint="#007bff"
+        android:background="@drawable/button_background" />
+
+    <android.widget.Button
+        android:id="@+id/rejectRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:text ="Rejeter"
+        android:textColor="@color/black"
+        android:backgroundTint="#007bff"
+        android:background="@drawable/button_background"/>
+
+    </LinearLayout>
+
+</LinearLayout>

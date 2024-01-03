@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayerAccountActivity">
+
+    <android.widget.Button
+        android:id="@+id/excel"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#008000"
+        android:text="@string/exporter_historique_vers_excel"
+        android:textColor="@color/white" />
+
+    <android.widget.Button
+        android:id="@+id/email"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="600dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#0000FF"
+        android:text="@string/inviter_un_ami"
+        android:textColor="@color/white" />
+
+    <android.widget.Button
+        android:id="@+id/backToMain6"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="1100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#f00020"
+        android:text="Retour"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="700dp"
+        android:layout_height="700dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginEnd="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25sp"
+        app:cardElevation="50sp"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#808080"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <EditText
+            android:id="@+id/friendBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:height="70dp"
+            android:background="@color/white"
+            android:hint= "Rentrez le nom d'utilisateur"/>
+
+        <android.widget.Button
+            android:id="@+id/sendRequest"
+            android:layout_width="180dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="460dp"
+            android:text ="Ajouter"
+            android:textColor="@color/black"
+            android:backgroundTint="#007bff"
+            android:background="@drawable/button_background" />
+
+        <TextView
+            android:id="@+id/players"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:height="50dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text = "Ou choisir parmi les joueurs actifs"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/possibleFriendsView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="140dp"
+            app:layout_constraintStart_toStartOf="@+id/players"/>
+
+        <TextView
+            android:id="@+id/awaitingRequests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="50dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="290dp"
+            android:background="#fbf7f5"
+            app:layout_constraintBottom_toBottomOf="@id/possibleFriendsView"
+            android:text = "@string/demandes_d_ami_en_attente"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pendingRequests"
+            android:layout_width="match_parent"
+            android:layout_height="309dp"
+            android:layout_marginTop="340dp"
+            android:background="#fbf7f5" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

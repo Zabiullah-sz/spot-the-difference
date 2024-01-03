@@ -1,0 +1,70 @@
+/* cool-dark-theme.scss */
+body.cool-dark-theme {
+    background-color: #212121; /* Fond sombre */
+    color: #6effff; /* Couleur du texte en thème sombre */
+    font-family: 'Helvetica', sans-serif; /* Police personnalisée */
+    background-size: 100vw 100vh; /* Utilisation des unités de vue pour la taille de l'arrière-plan */
+    margin: 0; /* Supprimer les marges par défaut du corps */
+    height: 100%; /* Assurer que le corps remplit toute la hauteur de la fenêtre */
+    /* Animation de fond amusante */
+    animation: coolBackground 10s linear infinite;
+}
+
+@keyframes coolBackground {
+    0% {
+        background-color: #212121;
+    }
+    50% {
+        background-color: #ff6e6e;
+    }
+    100% {
+        background-color: #6effff;
+    }
+}
+
+.cool-dark-theme .header {
+    color: #212121; /* Couleur du texte en thème sombre */
+    padding: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre douce */
+    transition: background-color 0.3s; /* Transition pour l'animation de survol */
+}
+
+.cool-dark-theme .header:hover {
+    background-color: #6effff; /* Couleur au survol */
+}
+
+.cool-dark-theme .button {
+    color: #212121;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s; /* Transition pour l'animation de survol */
+    transform: scale(1); /* Effet de mise à l'échelle */
+}
+
+.cool-dark-theme .button:hover {
+    background-color: #ff6e6e; /* Couleur au survol */
+    color: #6effff;
+    transform: scale(1.1); /* Effet de mise à l'échelle agrandie */
+}
+
+/* Animation de bulles */
+.cool-dark-theme .bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2); /* Couleur de la bulle */
+    border-radius: 50%; /* Forme arrondie */
+    animation: floatBubble 15s ease-in-out infinite; /* Animation de flottement */
+}
+
+@keyframes floatBubble {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-100px) scale(1.2);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}

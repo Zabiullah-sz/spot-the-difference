@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">JeuDifferences</string>
+    <string name="chatBoxHint">cliquez pour écrire</string>
+    <string name="nom_d_utilisateur">Nom d\'utilisateur...</string>
+    <string name="email">Émail Ex: équipe108@exemple.com</string>
+    <string name="mot_de_passe">mot de passe...</string>
+    <string name="cr_ation_de_compte">Création de compte</string>
+    <string name="se_connecter">se connecter</string>
+    <string name="choisir_avatar">Choisir son avatar</string>
+    <string name="team_name"><![CDATA[Mathieu Benoit\nAstir Tadrous\nZabiullah Shair Zaie\nManel Ben Jemaa\nMohamed Sameh Sellami\n& Maxence Lefebvre]]></string>
+    <string name="jeu_des_diff_rences">Jeu des \ndifférences</string>
+    <string name="classique">Classique</string>
+    <string name="temps_limit">Temps limité</string>
+    <string name="jouer">Jouer</string>
+    <string name="conf">Configuration</string>
+    <string name="param_tres_de_jeu">Paramètres de jeu</string>
+    <string name="historique_des_parties">Historiques des parties de :</string>
+    <string name="explication_des_param_tres1">Temps initial du compte à rebours (30sec par défaut):</string>
+    <string name="explication_des_param_tres2">Temps de pénalité pour l\'utilisation d\'un indice (5sec par défaut):</string>
+    <string name="explication_des_param_tres3">Temps gagné avec la découverte d\'une différence (5sec par défaut):</string>
+    <string name="confirm_warn_dialog">Êtes-vous sûr de vouloir</string>
+    <string name="image">Image originale</string>
+    <string name="image_modifier">Image modifié</string>
+    <string name="bouton_abandonner">Abandonner</string>
+    <string name="différences_trouvées">Différences trouvées</string>
+    <string name="mode_de_jeu_limité">Temps limité coop</string>
+    <string name="image_modifi_e">Image modifiée</string>
+    <string name="diff_rences">différences :</string>
+    <string name="delete_all_games">delete all games</string>
+    <string name="retour">Retour</string>
+    <string name="confirmer">Confirmer</string>
+    <string name="couter">écouter</string>
+    <string name="player_4">player 4</string>
+    <string name="player_3">player 3</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="do_you_want_to_quit">Do you want to quit the game?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="compte_utilisateur">Compte utilisateur</string>
+    <string name="exporter_historique_vers_excel">Exporter historique vers Excel</string>
+    <string name="inviter_un_ami">inviter un ami</string>
+    <string name="suivant">suivant</string>
+    <string name="tutoriel">Tutoriel</string>
+    <string name="rentrez_votre_v_nement">rentrez votre événement</string>
+    <string name="cr_er">Créer</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="observateur">Observateur</string>
+
+    <string-array name="account_options">
+        <item>Account Settings</item>
+        <item>Account Statistics</item>
+    </string-array>
+    <string name="requ_tes_en_attente">Requêtes en attente</string>
+    <string name="demandes_d_ami_en_attente">Demandes d\'ami en attente</string>
+    <string name="mute_button_label">Mettre en sourdine</string>
+    <string name="quitter">Quitter</string>
+    <string name="mode_reprise">Mode reprise</string>
+    <string name="_1x">1X</string>
+
+</resources>

@@ -1,0 +1,30 @@
+/* dark-theme-custom.scss */
+body.dark-theme {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif; /* Modification de la police */
+    background-size: 100vw 100vh; /* Utilisation des unités de vue pour la taille de l'arrière-plan */
+    margin: 0; /* Supprimer les marges par défaut du corps */
+    height: 100%; /* Assurer que le corps remplit toute la hauteur de la fenêtre */
+    /* Ajout d'une ombre douce aux éléments */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Autres styles spécifiques au thème sombre */
+}
+
+.dark-theme .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px; /* Ajout de marge intérieure */
+
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Ombre douce */
+}
+
+.dark-theme .button {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+
+    cursor: pointer;
+    transition: background-color 0.2s; /* Transition pour l'animation de survol */
+    background-size: 100vw 100vh;
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LimitedTimeActivity">
+<!--
+
+    <RelativeLayout
+        android:layout_width="369dp"
+        android:layout_height="154dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#67eae5">
+
+        <TextView
+            android:id="@+id/titre2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/image"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/originalImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titre2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="369dp"
+        android:layout_height="154dp"
+        android:layout_marginLeft="420dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#67eae5">
+
+        <TextView
+            android:id="@+id/titre3"
+            android:layout_width="133dp"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/image_modifier"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/modifiedImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titre3" />
+
+    </RelativeLayout>
+-->
+
+    <RelativeLayout
+        android:id="@+id/gameIdView"
+        android:layout_width="248dp"
+        android:layout_height="89dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="100dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/white">
+
+        <TextView
+            android:id="@+id/gameName"
+            android:layout_width="133dp"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>

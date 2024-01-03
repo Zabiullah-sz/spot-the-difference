@@ -1,0 +1,415 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* This is for the wrapper that contains nav-bar and chat-container */
+.wrapper {
+    display: flex;
+    flex-direction: column; // stack vertically
+    height: 100vh; // full viewport height
+    width: 103%; // full viewport width
+}
+.nav-bar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+
+    .navigate-button {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    }
+
+    .profile-button {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .profile-pic {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 8px;
+            object-fit: cover;
+        }
+    }
+
+    .detach-window-button {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    }
+    .close-window-button {
+        background-color: #ff0000;
+        color: #333;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background-color 0.2s, color 0.2s;
+
+        &:hover {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    }
+}
+.chat-container {
+    flex: 1; // Take up all available space
+    overflow-y: auto;
+    width: 103%;
+    display: flex;
+    height: 100vh;
+    padding: 10px;
+    background-color: white;
+
+    > div {
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.active-users,
+.all-chats {
+    display: flex;
+    flex-direction: column; // This makes it a vertical flex container
+    flex: 1;
+    border: #999;
+    border-radius: 5px;
+    border-width: 1px;
+    margin: 5px;
+    h3 {
+        border-bottom: 1px solid #e6e6e6;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            margin: 5px;
+
+            //put item in a row
+
+            border: 1px solid #aeaeae;
+            border-radius: 5px;
+            border-width: 1px;
+            padding: 5px;
+            cursor: pointer;
+            &:hover {
+                background-color: #f3f3f3;
+            }
+            &.active {
+                background-color: #e6f7ff; // This is just an example, choose any color or style you find visually appealing
+            }
+        }
+    }
+
+    .profile-pic {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 8px;
+        object-fit: cover;
+    }
+    .open-dialog-button {
+        width: 100%; // Span the full width
+        background-color: #007bff; // Primary color
+        border: none;
+        padding: 10px 0;
+        color: #fff; // White text
+        font-size: 20px; // Make the + sign bigger
+        border-radius: 20px 20px 20px 20px; // Rounded corners at top only
+
+        cursor: pointer;
+        transition: background-color 0.3s; // Smooth transition
+        margin-top: auto; // This pushes the button to the bottom
+
+        &:hover {
+            background-color: #0056b3; // Darken on hover
+        }
+    }
+    .navigate-button {
+        width: 100%; // Span the full width
+        background-color: #ffffff; // Primary color
+        border: none;
+        padding: 10px 0;
+        color: #787878; // White text
+        font-size: 20px; // Make the + sign bigger
+        border-radius: 20px 20px 20px 20px; // Rounded corners at top only
+        cursor: pointer;
+        transition: background-color 0.3s; // Smooth transition
+        margin-top: auto; // This pushes the button to the bottom
+
+        &:hover {
+            background-color: #0056b3; // Darken on hover
+        }
+    }
+    .unread-dot {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: blue;
+        border-radius: 50%;
+        margin-left: 5px;
+        vertical-align: middle;
+    }
+    .delete-chat-button {
+        //should be to the right of the chat name
+        margin-left: auto;
+
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: #c82333;
+        }
+    }
+}
+
+.active-chat {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    h3 {
+        border-bottom: 1px solid #e6e6e6;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    .messages {
+        flex-grow: 1;
+        overflow-y: auto;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column-reverse; /* This will stack new messages from the bottom */
+        padding-bottom: 10px; /* Providing some space for the last message */
+
+        .message-content {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+            display: inline-block;
+            border-radius: 15px;
+        }
+        .message-time {
+            font-size: 8px;
+            color: #999;
+            margin-left: 10px;
+        }
+        .my-message {
+            text-align: right;
+            .message-content {
+                background-color: #e6f7ff;
+            }
+        }
+    }
+
+    .message-input {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+            flex: 1;
+            margin-right: 10px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 5px 15px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+    }
+}
+.search-result {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.join-button {
+    background-color: #4caf50; /* or any color of your choice */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #45a049; /* slightly darker shade for hover effect */
+}
+.color-selector-container {
+    display: flex; /* Utilisez un affichage flex pour aligner les éléments horizontalement */
+    align-items: center; /* Centrez verticalement les éléments dans le conteneur */
+}
+
+.color-selector-container h3,
+.color-selector-container input,
+.color-selector-container button {
+    margin-right: 10px; /* Ajoutez de la marge à droite pour espacer les éléments */
+}
+
+.chat-name {
+    flex-grow: 1;
+    margin: 0; /* remove default margin from <p> */
+}
+.confirm-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.confirm-button:hover {
+    background-color: #0056b3;
+}
+/* CSS pour conserver les bulles de chat en blanc avec écriture noire */
+.chat-container {
+    background-color: #ffffff; /* Couleur de fond blanche */
+    color: #000000; /* Couleur du texte noire */
+}
+
+.active-chat {
+    background-color: #ffffff; /* Couleur de fond blanche */
+    color: #000000; /* Couleur du texte noire */
+}
+
+.messages {
+    background-color: #ffffff; /* Couleur de fond blanche */
+    color: #000000; /* Couleur du texte noire */
+}
+
+.message-content {
+    background-color: #ffffff; /* Couleur de fond blanche */
+    color: #000000; /* Couleur du texte noire */
+}
+
+.message-time {
+    /* Remplacez la valeur par celle que vous préférez */
+    color: #0f0909;
+    size: 20px;
+}
+
+/* Ajoutez d'autres sélecteurs au besoin */
+.message-profile-pic {
+    width: 15px; /* Adjust the size as needed */
+    height: 15px;
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 10px; /* Space between the image and the message */
+}
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Style for the send and record buttons */
+button:enabled {
+    background-color: #4CAF50; /* Green background for active buttons */
+    color: white;
+}
+
+/* Style for disabled buttons */
+button:disabled {
+    background-color: #ccc; /* Grey background for disabled buttons */
+    color: #666;
+}
+
+/* Hover effect for enabled buttons */
+button:enabled:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Style for the stop recording button */
+.stop-recording-button {
+    background-color: #f44336; /* Red background for stop button */
+    color: white;
+}
+
+.stop-recording-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+.search-bar {
+    display: flex; /* Aligns items horizontally */
+    align-items: center; /* Aligns items vertically in the center */
+    width: 100%; /* Full width of the container */
+    padding: 10px; /* Padding around the search bar */
+    background-color: #f2f2f2; /* Light grey background */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    margin-bottom: 20px; /* Spacing below the search bar */
+}
+
+.search-bar input {
+    width: 100%; /* Input field takes the remaining width */
+    padding: 10px;
+    border: none; /* No border for the input field */
+    border-radius: 5px; /* Rounded corners for the input field */
+    font-size: 16px; /* Comfortable reading size for most users */
+    outline: none; /* Removes the default focus outline */
+}

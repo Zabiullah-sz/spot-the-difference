@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="label-container">
+        <label for="userInput">Temps du compte à rebours:</label>
+    </div>
+    <div class="input-container">
+        <input
+            #userInputChrono
+            id="userInput"
+            type="number"
+            min="20"
+            [value]="60"
+            max="300"
+            pattern="[0-9]*"
+            (blur)="enforceLimits(userInputChrono)"
+            oninput="this.value=Math.abs(this.value);"
+            (input)="warnBadValue(userInputChrono.value)"
+        />
+    </div>
+</div>
+<div class="row">
+    <div class="label-container">
+        <label>Mode triche:</label>
+    </div>
+    <div class="input-container">
+        <input type="checkbox" [(ngModel)]="isCheatingAllowed" (input)="warnBadValue(userInputChrono.value)" />
+    </div>
+</div>
+<div class="row buttons rb">
+    <app-paper-button id="confirm" name="Confirmer" (click)="closeDialog(userInputChrono.value, isCheatingAllowed)"></app-paper-button>
+</div>
+<img class="green-push-pin top left" src="./assets/green_pin.png" draggable="false" />
+<img class="green-push-pin top right" src="./assets/green_pin.png" draggable="false" />
+<img class="green-push-pin bottom left" src="./assets/green_pin.png" draggable="false" />
+<img class="green-push-pin bottom right" src="./assets/green_pin.png" draggable="false" />

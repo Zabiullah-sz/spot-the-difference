@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:elevation="4dp"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="En attente d'autres joueurs"
+        android:layout_marginBottom="20dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    <Button
+        android:id="@+id/btnQuitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quitter"/>
+</LinearLayout>

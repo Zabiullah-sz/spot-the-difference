@@ -1,0 +1,121 @@
+<div class="wrapper">
+    <div class="nav-bar">
+        <ng-container *ngIf="!isDetached">
+            <button class="navigate-button" (click)="goToHome()">Retour</button>
+
+            <button class="profile-button" (click)="goToHome()">
+                <img [src]="imageBaseUrl + currentUser?.userId" alt="{{ currentUser?.username }}" class="profile-pic" />
+                {{ currentUser?.username }}
+            </button>
+
+            <button class="detach-window-button" (click)="detachWindow()">Ouvrir dans une fenêtre séparé</button>
+        </ng-container>
+        <ng-container *ngIf="isDetached">
+            <button class="close-window-button" (click)="close()">Fermer</button>
+        </ng-container>
+    </div>
+    <div class="chat-container">
+        <div class="all-chats">
+            <h3>Mes conversations</h3>
+            <!-- Sélecteur de couleur de fond du chat (déplacé en dessous de "My Chats") -->
+            <div class="chat-background-color-selector">
+                <div class="color-selector-container">
+                    <h3>Sélectionnez la couleur de fond du chat :</h3>
+                    <input type="color" id="chatBackgroundColorSelect" [(ngModel)]="chatBackgroundColor" (change)="changeChatBackgroundColor()" />
+                    <button (click)="confirmChatBackgroundColor()" class="confirm-button">Confirmer</button>
+                </div>
+            </div>
+            <ul>
+                <li [class.active]="chat === activeChat" *ngFor="let chat of chats" (click)="selectChat(chat)">
+                    <ng-container *ngIf="chat.name === 'Principal'">
+                        <img src="./assets/triangle.png" alt="Main Chat" class="profile-pic" />
+                        {{ chat.name }}
+                        <span *ngIf="chat.unread" class="unread-dot"></span>
+                    </ng-container>
+                    <ng-container *ngIf="chat.private" class="private-chat">
+                        <img [src]="imageBaseUrl + chat.users[0]?.userId" alt="{{ chat.name }}" class="profile-pic" />
+                        {{ chat.name }}
+                        <span *ngIf="chat.unread" class="unread-dot"></span>
+                    </ng-container>
+                    <ng-container *ngIf="!chat.private && chat.name !== 'Principal'">
+                        <img src="./assets/zig-zag.png" alt="Main Chat" class="profile-pic" />
+                        {{ chat.name }}
+                        <span *ngIf="chat.unread" class="unread-dot"></span>
+                        <button class="delete-chat-button" (click)="deleteChat(chat)">x</button>
+                    </ng-container>
+                </li>
+            </ul>
+        </div>
+
+        <div class="active-chat">
+            <ng-container *ngIf="activeChat; else noChatTemplate">
+                <h3>
+                    Discuter avec:
+                    <div *ngFor="let user of activeChat.users">
+                        <ng-container *ngIf="user !== currentUser && user?.username">
+                            {{ user.username }}
+                        </ng-container>
+                    </div>
+                </h3>
+                <div class="messages" #msgContainer>
+                    <div *ngFor="let message of activeChat?.messages" [class.my-message]="message.sender === currentUser?.userId">
+                        <ng-container *ngIf="message.sender !== currentUser?.userId">
+                            <img [src]="imageBaseUrl + message.sender" alt="Profile Pic" class="message-profile-pic" />
+                        </ng-container>
+                        <ng-container *ngIf="message.type === 'text'">
+                            <div class="message-content" [class.my-message]="message.sender === currentUser?.userId">
+                                <div>{{ message.message }}</div>
+                                <div class="message-time">{{ message.timestamp | date: 'shortTime' }}</div>
+                            </div>
+                        </ng-container>
+                        <ng-container *ngIf="message.type === 'audio'">
+                            <div [class.my-message]="message.sender === currentUser?.userId">
+                                <audio controls>
+                                    <source [src]="voiceMessageBaseUrl + message.message" type="audio/ogg" />
+                                    Your browser does not support the audio element.
+                                </audio>
+                                <div class="message-time">{{ message.timestamp | date: 'shortTime' }}</div>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+                <div class="message-input">
+                    <ng-container *ngIf="!isRecording">
+                        <input [(ngModel)]="newMessage" (keyup.enter)="sendMessage()" placeholder="Votre message..." />
+                        <!-- Send button with styled icon -->
+                        <button (click)="sendMessage()" [disabled]="!newMessage" style="background-color: white;">
+                            <img src="./assets/send_btn.png" alt="Send" style="width: 30px; height: 30px; background-color: white;" />
+                        </button>
+                        <!-- Record button with styled icon -->
+                        <button (click)="startRecording()" [disabled]="isRecording" style="background-color: white;">
+                            <img src="./assets/micro.png" alt="Record" style="width: 20px; height: 30px; background-color: white;" />
+                        </button>
+                    </ng-container>
+                    <ng-container *ngIf="isRecording">
+                        <button class="stop-recording-button" (click)="stopRecording()" [disabled]="!isRecording" >Stop</button>
+                    </ng-container>
+                </div>
+            </ng-container>
+            <ng-template #noChatTemplate>
+                <div class="no-active-chat">Sélectionner un chat</div>
+            </ng-template>
+        </div>
+        <div class="active-users">
+            <h3>Utilisateurs Actifs</h3>
+            <ul>
+                <li *ngFor="let user of allActiveUser">
+                    <img [src]="imageBaseUrl + user?.userId" alt="{{ user.username }}" class="profile-pic" />
+                    {{ user.username }}
+
+                </li>
+            </ul>
+            <h3>Chat Dispo</h3>
+            <input class="search-bar" type="text" placeholder="Search chats..." [formControl]="searchControl" />
+            <div class="search-result" *ngFor="let chat of allChats">
+                <button class="join-button" (click)="joinChat(chat)">Joindre</button>
+                <p class="chat-name">{{ chat.name }}</p>
+            </div>
+            <button class="open-dialog-button" (click)="openAddChatDialog()">Créer un nouveau chat</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<button routerLink="/home" class="button-back">Retour</button>
+<div class="active-games-container">
+  <h2 class="games-title">Joindre une parti en mode observateur</h2>
+  <button class="refresh-button" (click)="refresh()">Rafraichir les jeux en cours</button>
+  <div *ngFor="let game of activeGames; let i = index" class="game-item">
+    <div class="game-info">
+      <div class="game-mode">{{ gameModeToString(game.gameMode) }}</div>
+      <div class="player-count">Nombre de joeurs:{{ game.players.length }}</div>
+    </div>
+    <button class="join-button" (click)="joinAsObserver(game.id)">Join</button>
+  </div>
+  <div *ngIf="activeGames.length === 0" class="no-games-message">
+   Aucune partie en cours
+  </div>
+</div>

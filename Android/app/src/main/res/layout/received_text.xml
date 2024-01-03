@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/profile_picture"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_picture" />
+
+    <RelativeLayout
+        android:layout_width="208dp"
+        android:layout_height="74dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/profilePicture"
+        android:background="@drawable/rounded_light">
+
+        <!-- ImageView for the play button -->
+        <ImageView
+            android:id="@+id/receivedPlayButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:src="@drawable/ic_play"
+            android:visibility="visible" />
+
+        <!-- TextView for the received message -->
+        <TextView
+            android:id="@+id/messageReceived"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/receivedPlayButton"
+            android:padding="15dp"
+            android:paddingLeft="25dp"
+            android:text="Received Text"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- TextView for the received message time -->
+        <TextView
+            android:id="@+id/MessageReceivedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+
+            android:text="Time"
+            android:textColor="#D3D3D3"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+/* rainbow-theme.scss */
+body.rainbow-theme {
+    background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #00ff00, #0066ff, #9900ff); /* Arrière-plan en dégradé arc-en-ciel */
+    color: #fff; /* Couleur du texte en thème arc-en-ciel */
+    font-family: 'Comic Sans MS', cursive; /* Police personnalisée amusante */
+
+    /* Animation de l'arrière-plan en dégradé */
+    animation: rainbowBackground 10s linear infinite;
+    background-size: 100vw 100vh; /* Utilisation des unités de vue pour la taille de l'arrière-plan */
+    margin: 0; /* Supprimer les marges par défaut du corps */
+    height: 100%; /* Assurer que le corps remplit toute la hauteur de la fenêtre */
+}
+
+@keyframes rainbowBackground {
+    0% {
+        background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #00ff00, #0066ff, #9900ff);
+    }
+    25% {
+        background: linear-gradient(45deg, #ff9900, #ffff00, #00ff00, #0066ff, #9900ff, #ff0000);
+    }
+    50% {
+        background: linear-gradient(45deg, #ffff00, #00ff00, #0066ff, #9900ff, #ff0000, #ff9900);
+    }
+    75% {
+        background: linear-gradient(45deg, #00ff00, #0066ff, #9900ff, #ff0000, #ff9900, #ffff00);
+    }
+    100% {
+        background: linear-gradient(45deg, #0066ff, #9900ff, #ff0000, #ff9900, #ffff00, #00ff00);
+    }
+}
+
+.rainbow-theme .header {
+    background-color: transparent; /* Fond transparent pour l'en-tête en thème arc-en-ciel */
+    color: #fff; /* Couleur du texte en thème arc-en-ciel */
+    padding: 20px;
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Ombre douce */
+    transition: background-color 0.3s; /* Transition pour l'animation de survol */
+}
+
+.rainbow-theme .header:hover {
+    background-color: transparent; /* Fond transparent au survol */
+}
+
+.rainbow-theme .button {
+    background-color: transparent; /* Fond transparent pour les boutons en thème arc-en-ciel */
+    color: #fff;
+    border: 2px solid #fff; /* Bordure blanche autour des boutons */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    transform: scale(1);
+}
+
+.rainbow-theme .button:hover {
+    background-color: transparent; /* Fond transparent au survol */
+    color: #fff;
+    border: 2px solid #fff;
+    transform: scale(1.1);
+    background-size: 100vw 100vh;
+}

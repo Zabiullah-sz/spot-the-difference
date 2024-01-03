@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="793dp"
+        android:layout_height="397dp"
+        android:background="#FFFFBB33"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/paper"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="234dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:text="Paramètres de jeu:"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textExplaination1"
+        android:layout_width="450dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/explication_des_param_tres1"
+        android:textColor="#000000"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textExplaination2"
+        android:layout_width="450dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/explication_des_param_tres2"
+        android:textColor="#000000"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textExplaination1" />
+
+    <TextView
+        android:id="@+id/textExplaination3"
+        android:layout_width="450dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/explication_des_param_tres3"
+        android:textColor="#000000"
+        android:textAlignment="viewStart"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textExplaination2" />
+
+    <TextView
+        android:id="@+id/textMIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:text="MIN"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textExplaination1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textMAX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="100dp"
+        android:text="MAX"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textMIN"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textVALUE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="100dp"
+        android:text="VALEUR"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textMAX"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textMinimal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textColor="#4CAF50"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textExplaination1"
+        app:layout_constraintEnd_toEndOf="@+id/textMIN"
+        app:layout_constraintStart_toStartOf="@+id/textMIN"
+        app:layout_constraintTop_toTopOf="@+id/textExplaination1" />
+
+    <TextView
+        android:id="@+id/textMinimal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#4CAF50"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textExplaination2"
+        app:layout_constraintEnd_toEndOf="@+id/textMIN"
+        app:layout_constraintStart_toStartOf="@+id/textMIN"
+        app:layout_constraintTop_toTopOf="@+id/textExplaination2" />
+
+    <TextView
+        android:id="@+id/textMinimal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="#4CAF50"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textExplaination3"
+        app:layout_constraintEnd_toEndOf="@+id/textMIN"
+        app:layout_constraintStart_toStartOf="@+id/textMIN"
+        app:layout_constraintTop_toTopOf="@+id/textExplaination3" />
+
+    <TextView
+        android:id="@+id/textMaximal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="300"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textExplaination1"
+        app:layout_constraintEnd_toEndOf="@+id/textMAX"
+        app:layout_constraintStart_toStartOf="@+id/textMAX"
+        app:layout_constraintTop_toTopOf="@+id/textExplaination1" />
+
+    <TextView
+        android:id="@+id/textMaximal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textExplaination2"
+        app:layout_constraintEnd_toEndOf="@+id/textMAX"
+        app:layout_constraintStart_toStartOf="@+id/textMAX"
+        app:layout_constraintTop_toTopOf="@+id/textExplaination2" />
+
+    <TextView
+        android:id="@+id/textMaximal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textExplaination3"
+        app:layout_constraintEnd_toEndOf="@+id/textMAX"
+        app:layout_constraintStart_toStartOf="@+id/textMAX"
+        app:layout_constraintTop_toTopOf="@+id/textExplaination3" />
+
+    <EditText
+        android:id="@+id/editNumberParam1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number|numberDecimal"
+        android:text="30"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textExplaination1"
+        app:layout_constraintEnd_toEndOf="@+id/textVALUE"
+        app:layout_constraintStart_toStartOf="@+id/textVALUE"
+        app:layout_constraintTop_toTopOf="@+id/textExplaination1" />
+    <EditText
+        android:id="@+id/editNumberParam2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number|numberDecimal"
+        android:text="5"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textExplaination2"
+        app:layout_constraintEnd_toEndOf="@+id/textVALUE"
+        app:layout_constraintStart_toStartOf="@+id/textVALUE"
+        app:layout_constraintTop_toTopOf="@+id/textExplaination2" />
+    <EditText
+        android:id="@+id/editNumberParam3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="2"
+        android:inputType="number|numberDecimal"
+        android:text="5"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textExplaination3"
+        app:layout_constraintEnd_toEndOf="@+id/textVALUE"
+        app:layout_constraintStart_toStartOf="@+id/textVALUE"
+        app:layout_constraintTop_toTopOf="@+id/textExplaination3" />
+
+    <Button
+        android:id="@+id/buttonCancelParams"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#E86793"
+        android:text="Annuler"
+        android:textColor="#000000"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/buttonSaveParams"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#81DA84"
+        android:text="Sauvegarder"
+        android:textColor="#000000"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonCancelParams" />
+    <Button
+        android:id="@+id/buttonResetParams"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#FD8F6C"
+        android:text="Réinitialiser"
+        android:textColor="#000000"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonSaveParams" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

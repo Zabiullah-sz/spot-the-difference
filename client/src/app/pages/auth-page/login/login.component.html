@@ -1,0 +1,22 @@
+<div class="login-container">
+    <h1>Connexion</h1>
+
+    <!-- Error message placeholder -->
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+    </div>
+
+    <form (submit)="onSubmit()">
+        <div class="input-group">
+            <label for="username">Nom Utilisateur:</label>
+            <input type="text" id="username" [(ngModel)]="username" name="username" placeholder="Rentre ton nom utilisateur">
+        </div>
+        <div class="input-group">
+            <label for="password">Mot de Passe:</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="Rentre ton mot de passe">
+        </div>
+        <button type="submit">Se connecter</button>
+        <button type="button" class="button-go-signup" (click)="goToSignup()">S'enregistrer</button>
+
+    </form>
+</div>

@@ -1,0 +1,61 @@
+.dialog-container {
+  width: 400px; 
+  height: 300px; 
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex; 
+  flex-direction: column; // Stack content vertically
+  justify-content: center; // Center content vertically
+  align-items: center; // Center content horizontally
+  gap: 15px; // Gap between elements
+  background-color: #ffffff;
+
+  .input-with-tags {
+      width: 90%; // Take most of the width of the dialog
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px;
+      display: flex; 
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+
+      .tags {
+          display: inline-flex;
+          gap: 8px;
+
+          .tag {
+              background-color: #e1e1e1;
+              padding: 5px 10px;
+              border-radius: 20px;
+          }
+      }
+
+      input {
+          flex: 1; 
+          border: none; 
+          outline: none;
+      }
+  }
+
+  .dialog-button {
+      padding: 5px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+          background-color: #0056b3;
+      }
+  }
+  .dialog-button[disabled] {
+    background-color: #e0e0e0; /* A light gray */
+    color: #aaa;               /* A darker gray for the text */
+    cursor: not-allowed;       /* Show a 'not allowed' cursor */
+    border: 1px solid #ccc;    /* An optional border */
+}
+}

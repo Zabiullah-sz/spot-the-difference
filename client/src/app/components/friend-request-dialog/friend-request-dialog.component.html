@@ -1,0 +1,11 @@
+<mat-dialog-content>
+    <h2>You have a new friend request</h2>
+    <div class="profile-container">
+        <img [src]="imageBaseUrl + data.user.userId" alt="profile image" class="profile-image" />
+        <span class="profile-name">{{ data.user.username }}</span>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button (click)="onDecline()">Decline</button>
+    <button mat-button color="primary" (click)="onAccept()">Accept</button>
+</mat-dialog-actions>

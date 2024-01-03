@@ -1,0 +1,6 @@
+<p>theme-switcher works!</p>
+<!-- theme-switcher.component.html -->
+<label class="switch">
+    <input type="checkbox" [checked]="themeServiceInstance.getTheme() === 'dark-theme'" (change)="toggleTheme()" />
+    <span class="slider"></span>
+</label>

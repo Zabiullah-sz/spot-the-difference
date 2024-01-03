@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAccountActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="601dp"
+        android:layout_height="711dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25sp"
+        app:cardElevation="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/cr_ation_de_compte"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/avatarCreation"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:height="80dp"
+            android:src="@drawable/avatar" />
+
+        <Button
+            android:id="@+id/cameraButton"
+            android:layout_width="186dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="170dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/choisir_avatar"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/userEmailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avatarCreation"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginRight="10dp"
+            android:width="400dp"
+            android:height="80dp"
+            android:hint="@string/email" />
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avatarCreation"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="400dp"
+            android:layout_marginRight="10dp"
+            android:width="400dp"
+            android:height="80dp"
+            android:hint="@string/nom_d_utilisateur" />
+
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginRight="10dp"
+            android:width="400dp"
+            android:height="80dp"
+            android:hint="@string/mot_de_passe" />
+
+        <Button
+            android:id="@+id/createAccountButton"
+            android:layout_width="186dp"
+            android:layout_height="66dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="600dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/se_connecter"
+            android:textColor="@color/white"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

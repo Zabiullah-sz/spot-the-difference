@@ -1,0 +1,74 @@
+<div id="user-settings" (click)="toggleMenu()">
+    <img
+        id="user-profile-pic"
+        [src]="imageBaseUrl + user.userId"
+        alt="Profile picture"
+        draggable="false"
+    />
+    <span id="user-name">{{ user.username }}</span>
+    <div id="user-menu" [ngClass]="{ hidden: !menuVisible }">
+        <button class="user-menu-item" routerLink="/configuration">Configuration</button>
+        <button class="user-menu-item" routerLink="/stat">Statistiques</button>
+        <button class="user-menu-item" (click)="logout()">Déconnexion</button>
+    </div>
+</div>
+<section id="title" class="plain-paper-bg justified">
+    <h1 class="header-item">
+        <img src="./assets/magnifying_glass.png" alt="Logo test" draggable="false" />
+        <span>Jeu</span> des différences
+    </h1>
+    <img class="top left" src="./assets/adhesive_tape.png" draggable="false" />
+    <img class="top right" src="./assets/adhesive_tape.png" draggable="false" />
+    <img class="bottom left" src="./assets/adhesive_tape.png" draggable="false" />
+    <img class="bottom right" src="./assets/adhesive_tape.png" draggable="false" />
+</section>
+<app-post-it class="reenie" name="Temps limité" (click)="timedSelectionModal()" style="background-color: #ff7faf; left: 710px; top: 380px"></app-post-it>
+<app-post-it
+    class="reenie"
+    name="Classique"
+    color="#FCDB00"
+    routerLink="/classic"
+    style="background-color: #fcdb00; left: 433px; top: 540px"
+></app-post-it>
+
+<ng-container *ngIf="!isDetached">
+    <app-post-it
+        class="reenie"
+        name="Chat"
+        color="#FCDB00"
+        routerLink="/chat-prototype"
+        style="background-color: #7d0de6; left: 433px; top: 800px"
+        routerLink="/chat-main"
+        style="background-color: #fcdb00; left: 433px; top: 800px"
+    ></app-post-it>
+</ng-container>
+
+<app-post-it
+    class="reenie"
+    name="Configuration"
+    color="#67EAE5"
+    routerLink="/config"
+    style="background-color: #67eae5; left: 733px; top: 650px"
+></app-post-it>
+<app-post-it
+    class="reenie"
+    name="Tutoriel"
+    color="#FCDB00"
+    routerLink="/tutorial"
+    style="background-color: #00fc71; left: 433px; top: 300px"
+></app-post-it>
+<app-post-it  class="reenie" name="Observateur" color="#67EAE5" routerLink="/observer" style="background-color: #67ea6e; left: 780px; top: 930px"></app-post-it>
+
+<div id="team_display" class="plain-paper-bg">
+    <p>
+        Par l'équipe 108: <br />Mathieu Benoit, <br />Astir Tadrous, <br />Zabiullah Shair Zaie, <br />manel Ben Jemaa, <br />
+        Mohamed Sameh Sellami & <br />
+        Maxence Lefebvre
+    </p>
+    <img class="top left" src="./assets/adhesive_tape.png" draggable="false" />
+    <img class="top right" src="./assets/adhesive_tape.png" draggable="false" />
+    <img class="bottom left" src="./assets/adhesive_tape.png" draggable="false" />
+    <img class="bottom right" src="./assets/adhesive_tape.png" draggable="false" />
+</div>
+<img id="giant_image" src="./assets/giant_magnifier.png" alt="Loupe géante" draggable="false" />
+<app-chatbox *ngIf="showChatbox"></app-chatbox>

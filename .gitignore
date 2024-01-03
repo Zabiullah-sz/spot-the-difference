@@ -1,0 +1,22 @@
+#ignoring .vscode folder but we keep some files for debuging
+/.vscode/chrome
+/.vs/
+
+package-lock.json
+.DS_Store
+
+# Code Coverage Folder
+coverage/
+
+/build
+#Node Modules
+/node_modules
+/build
+#Electron build
+/build/client-win32-x64/
+~$Equipe205.xlsx
+client/build/client-win32-x64/LICENSES.chromium.html
+client/build/client-win32-x64/resources/app.asar
+Android/.idea/misc.xml
+Android/.idea/deploymentTargetDropDown.xml
+Android/.idea/misc.xml

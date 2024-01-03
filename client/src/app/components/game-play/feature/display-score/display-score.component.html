@@ -1,0 +1,15 @@
+<h2>Différences trouvées</h2>
+<div [ngClass]="{ colored: isLimitedTimeMode(), content: !isLimitedTimeMode() }">
+    <div [ngClass]="{ names_container: isLimitedTimeMode(), content: !isLimitedTimeMode() }">
+        <div [ngClass]="{ colored: !isLimitedTimeMode() }" *ngFor="let player of gameData.allPlayers">
+            <p *ngIf="player === gameData.name">{{ player }} (vous)</p>
+            <p *ngIf="player !== gameData.name">{{ player }}</p>
+
+            <i *ngIf="!isLimitedTimeMode()">{{ differencesFound(gamePlayerScore.get(player) || 0) }}/{{ differencesLeft }}</i>
+            <button *ngIf="player !== gameData.name" (click)="toggleMute(player)" [class.muted]="isPlayerMuted(player)">
+                {{ isPlayerMuted(player) ? 'Unmute' : 'Mute' }}
+            </button>
+        </div>
+    </div>
+    <i *ngIf="isLimitedTimeMode()">{{ differencesFound(gamePlayerScore.get(gameData.name) || 0) }} différences trouvées</i>
+</div>

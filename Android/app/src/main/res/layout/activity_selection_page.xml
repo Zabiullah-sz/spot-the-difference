@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".ClassicSelectionActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@android:color/black" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="Sélection de partie classique"/>
+
+        <android.widget.Button
+            android:id="@+id/backToMain4"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="800dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#f00020"
+            android:text="Retour"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+        android:id="@+id/carouselRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+
+
+    <FrameLayout
+        android:id="@+id/chatLayoutFrame"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="220dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Include your chat layout without altering its background -->
+        <include
+            android:id="@+id/chatLayout"
+            layout="@layout/activity_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

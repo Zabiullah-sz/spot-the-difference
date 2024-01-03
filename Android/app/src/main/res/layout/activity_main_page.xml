@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPageActivity"
+    >
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/draw">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <com.google.android.material.navigation.NavigationView
+            android:layout_width="wrap_content"
+            android:id="@+id/nav_view"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/main_menu"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="start"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <android.widget.Button
+            android:id="@+id/ObserverButton"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="600dp"
+            android:layout_marginTop="550dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="#00fc71"
+            android:text="@string/observateur"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/gameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="142dp"
+            android:layout_marginLeft="500dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/score"
+            android:gravity="center"
+            android:text="@string/jeu_des_diff_rences"
+            android:textSize="30sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/teamNames"
+            android:layout_width="231dp"
+            android:layout_height="198dp"
+            android:layout_marginTop="600dp"
+            android:background="@drawable/score"
+            android:gravity="center"
+            android:text="@string/team_name"
+            android:layout_marginStart="1000dp"/>
+
+        <ImageView
+            android:layout_width="1176dp"
+            android:layout_height="450dp"
+            android:layout_marginLeft="600dp"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/giant_magnifier" />
+
+    <RelativeLayout
+        android:id="@+id/chatLayoutFrame"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="220dp"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+        <include
+            android:id="@+id/chatLayout"
+            layout="@layout/activity_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+        <android.widget.Button
+            android:id="@+id/LimitedTimeModeButton"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginLeft="440dp"
+            android:background="@drawable/button_background"
+            android:text="@string/temps_limit"
+            android:textColor="@color/black"
+            android:backgroundTint="#ff7faf" />
+
+        <android.widget.Button
+            android:id="@+id/tutorielButton"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginStart="240dp"
+            android:text="@string/tutoriel"
+            android:textColor="@color/black"
+            android:backgroundTint="#00fc71"
+            android:background="@drawable/button_background"
+            />
+
+
+        <android.widget.Button
+            android:id="@+id/classicModeButton"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="360dp"
+            android:layout_marginLeft="250dp"
+            android:text="@string/classique"
+            android:textColor="@color/black"
+            android:backgroundTint="#fcdb00"
+            android:background="@drawable/button_background"
+            />
+
+        <android.widget.Button
+            android:id="@+id/ChatButton"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="520dp"
+            android:layout_marginLeft="235dp"
+            android:text="Chat"
+            android:textColor="@color/black"
+            android:backgroundTint="#fcdb00"
+            android:background="@drawable/button_background" />
+
+
+        <android.widget.Button
+            android:id="@+id/ConfigurationButton"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="390dp"
+            android:layout_marginLeft="440dp"
+            android:text="Configuration"
+            android:textColor="@color/black"
+            android:backgroundTint="#67eae5"
+            android:background="@drawable/button_background"/>
+
+        <android.widget.Button
+            android:id="@+id/setEventButton"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="540dp"
+            android:layout_marginLeft="425dp"
+            android:text="Calendrier"
+            android:textColor="@color/black"
+            android:backgroundTint="#007bff"
+            android:background="@drawable/button_background" />
+
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

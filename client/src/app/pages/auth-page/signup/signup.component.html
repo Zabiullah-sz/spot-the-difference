@@ -1,0 +1,77 @@
+<div class="signup-container">
+    <h1>S'inscrire</h1>
+
+    <!-- Error message placeholder -->
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+    </div>
+
+    <form (submit)="onSubmit()">
+        <div class="input-group">
+            <label for="username">Email:</label>
+            <input type="text" id="email" [(ngModel)]="email" name="email" placeholder="Rentre ton email" />
+        </div>
+        <div class="input-group">
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" [(ngModel)]="username" name="username" placeholder="Rentre ton nom d'utilisateur" />
+        </div>
+        <div class="input-group">
+            <label for="password">Mot de Passe:</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" placeholder="Rentre ton mot de passe" />
+        </div>
+        <div *ngIf="imageHasBeenSelected">
+            <img class="selected-image-avatar" [src]="selectedImage" alt="Selected Image">
+            <button type="button" class="button-remove-selection" (click)="removeSelectedImage()">Remove Selection</button>
+        </div>
+ 
+        <div class="image-selector" *ngIf="!imageHasBeenSelected">
+            <!-- Predefined Images -->
+            <div class="predefined-images">
+                <button type="button" class="image-button" (click)="usePredefinedImage('./assets/triangle.png')">
+                    <img
+                        class="image-avatar"
+                        src="./assets/triangle.png"
+                        (click)="usePredefinedImage('./assets/triangle.png')"
+                        alt="Image 1"
+                        [ngClass]="{ selected: selectedImage === './assets/triangle.png' }"
+                    />
+                </button>
+                <button type="button" class="image-button" (click)="usePredefinedImage('./assets/zig-zag.png')">
+                    <img
+                        class="image-avatar"
+                        src="./assets/zig-zag.png"
+                        (click)="usePredefinedImage('./assets/zig-zag.png')"
+                        alt="Image 2"
+                        [ngClass]="{ selected: selectedImage === './assets/zig-zag.png' }"
+                    />
+                </button>
+                <button type="button" class="image-button" (click)="usePredefinedImage('./assets/flower.png')">
+                    <img
+                        class="image-avatar"
+                        src="./assets/flower.png"
+                        (click)="usePredefinedImage('./assets/flower.png')"
+                        alt="Image 3"
+                        [ngClass]="{ selected: selectedImage === './assets/flower.png' }"
+                    />
+                </button>
+                <button type="button" class="image-button" (click)="usePredefinedImage('./assets/pentagon.png')">
+                    <img
+                        src="./assets/pentagon.png"
+                        (click)="usePredefinedImage('./assets/pentagon.png')"
+                        alt="Image 4"
+                        [ngClass]="{ selected: selectedImage === './assets/pentagon.png' }"
+                    />
+                </button>
+            </div>
+            or
+
+            <!-- Custom Image Uploader -->
+            <div class="image-uploader" (dragover)="preventDefault($event)" (drop)="onDrop($event)">
+                <input type="file" (change)="onFileSelected($event)" #fileInput />
+                <p>Glisse une image ici ou clique pour en sélectionner une.</p>
+            </div>
+        </div>
+        <button type="submit">S'enregistrer</button>
+        <button type="button" class="button-go-login" (click)="goToLogin()">Se connecter</button>
+    </form>
+</div>

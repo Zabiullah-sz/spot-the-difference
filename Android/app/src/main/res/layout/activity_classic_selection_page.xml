@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClassicSelectionActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/game1"
+        android:layout_width="600dp"
+        android:layout_height="350dp"
+        android:backgroundTint="#67eae5"
+        android:background="@drawable/button_background">
+
+        <TextView
+            android:id="@+id/titre1"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="jeu"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/imageGame1"
+            android:layout_width="340dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="100dp" />
+
+        <TextView
+            android:id="@+id/difficulty1"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="420dp"
+            android:text="jeu"
+            android:textColor="@color/black" />
+
+        <android.widget.Button
+            android:id="@+id/playButton1"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="400dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/white"
+            android:text="Rejoindre la partie"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="400dp"
+        android:layout_width="600dp"
+        android:layout_height="350dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#ff7faf">
+
+        <TextView
+            android:id="@+id/titre2"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="jeu"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/imageGame2"
+            android:layout_marginTop="100dp"
+            android:layout_width="330dp"
+            android:layout_height="160dp" />
+
+        <TextView
+            android:id="@+id/difficulty2"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="420dp"
+            android:text="jeu"
+            android:textColor="@color/black" />
+
+        <android.widget.Button
+            android:id="@+id/playButton2"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="400dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/white"
+            android:text="Rejoindre la partie"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="400dp"
+        android:layout_width="600dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="680dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="#67eae5">
+
+        <TextView
+            android:id="@+id/titre3"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="jeu"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/imageGame3"
+            android:layout_marginTop="100dp"
+            android:layout_width="330dp"
+            android:layout_height="160dp" />
+
+        <TextView
+            android:id="@+id/difficulty3"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="420dp"
+            android:text="jeu"
+            android:textColor="@color/black" />
+
+        <android.widget.Button
+            android:id="@+id/playButton3"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="400dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/white"
+            android:text="Rejoindre la partie"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/game4"
+        android:layout_width="600dp"
+        android:layout_height="350dp"
+        android:backgroundTint="#67eae5"
+        android:layout_marginLeft="680dp"
+        android:background="@drawable/button_background">
+
+        <TextView
+            android:id="@+id/titre4"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="jeu"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/imageGame4"
+            android:layout_width="340dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="100dp" />
+
+        <TextView
+            android:id="@+id/difficulty4"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="420dp"
+            android:text="jeu"
+            android:textColor="@color/black" />
+
+        <android.widget.Button
+            android:id="@+id/playButton4"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="400dp"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/white"
+            android:text="Rejoindre la partie"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

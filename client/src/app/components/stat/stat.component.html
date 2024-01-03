@@ -1,0 +1,41 @@
+<button routerLink="/home" class="button-back">Retour</button>
+<div class="config-container">
+
+        <h1>Statistiques</h1>
+
+
+    <div class="stats-container">
+       
+
+
+            <div class="average-stats">
+                <p><strong>Durée moyenne de jeu :</strong> {{ stats.averageGameDuration | number: '1.0-0' }} seconds</p>
+                <p><strong>Nombre moyen de différences trouvées :</strong> {{ stats.averageNumberOfDifferencesFound | number: '1.0-2' }}</p>
+            </div>
+
+        <h3>Parties joués par type</h3>
+        <canvas baseChart [data]="gameTypeData" [labels]="gameTypeLabels" [type]="'pie'"></canvas> 
+    </div>
+
+    <!-- Pie Chart for Game Outcomes (Won/Lost) -->
+    <div class="stats-container">
+        <h3>Résultats des jeux</h3>
+       <canvas baseChart [data]="gameOutcomeData" [type]="'pie'"></canvas>
+    </div>
+    <div class="ranking-section">
+        <h2>Classement</h2>
+
+        <ul class="ranking-list">
+            <li *ngFor="let user of ranking; let i = index">
+                <span class="rank">{{ i + 1 }}</span>
+                <span class="username">{{ user.username }}</span>
+                <span class="points">{{ user.points }} Points</span>
+                <img
+                    [src]="imageBaseUrl+ user.userId"
+                    alt="{{ user.username }}'s profile picture"
+                    class="profile-pic"
+                />
+            </li>
+        </ul>
+    </div>
+</div>

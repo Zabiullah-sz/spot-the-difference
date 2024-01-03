@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AccountSettingActivity">
+
+    <android.widget.Button
+        android:id="@+id/backToMain7"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:layout_marginLeft="1130dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/output_24"
+        android:textColor="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="981dp"
+        android:layout_height="472dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="182dp"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="973dp"
+            android:layout_height="451dp"
+            android:padding="16dp">
+
+            <!-- Existing ImageView -->
+            <ImageView
+                android:id="@+id/avatarImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar" />
+
+            <!-- Existing Button -->
+            <Button
+                android:id="@+id/changeAvatarButton"
+                android:layout_width="177dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avatarImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Changer l'avatar" />
+
+            <!-- Existing EditText -->
+            <EditText
+                android:id="@+id/pseudonymEditText"
+                android:layout_width="match_parent"
+                android:layout_height="84dp"
+                android:layout_below="@id/changeAvatarButton"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:hint="Nouveau pseudonyme" />
+
+            <!-- Existing TextView -->
+            <TextView
+                android:id="@+id/currentUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pseudonymEditText"
+                android:layout_marginTop="16dp"
+                android:background="@color/white"
+                android:text="Nom d'utilisateur: " />
+
+            <!-- Existing Button -->
+            <Button
+                android:id="@+id/saveChangesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_below="@id/currentUsername"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="364dp"
+                android:layout_marginBottom="32dp"
+                android:text="Enregistrer les modifications" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

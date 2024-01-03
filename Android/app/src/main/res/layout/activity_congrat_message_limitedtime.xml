@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="500dp"
+    android:layout_height="650dp"
+    android:background="@color/bleu"
+    tools:context=".CongratsMessageTimeLimitedActivity">
+
+    <ImageView
+        android:id="@+id/congratsImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/congrats_time_limited" />
+
+    <android.widget.Button
+        android:id="@+id/closeButton"
+        android:layout_width="150dp"
+        android:layout_height="86dp"
+        android:layout_below="@id/congratsImage"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/close" />
+
+
+    <TextView
+        android:id="@+id/differenceFound"
+        android:layout_width="116dp"
+        android:layout_height="126dp"
+        android:layout_below="@id/congratsImage"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="-183dp"
+        android:textColor="@color/bleu"
+        android:textSize="150px" />
+
+</RelativeLayout>
